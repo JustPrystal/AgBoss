@@ -1,0 +1,77 @@
+.contact{
+    background-color: $lightgray;
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media(max-width:567px){
+        padding: 0 20px;
+    }
+    .inner{
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+        @media(max-width:767px){
+            flex-direction: column-reverse;
+        }
+        .map{
+            width: calc(50% - 20px);
+            @media(max-width:767px){
+                width: 100%;
+            }
+        }
+        .form{
+            width: calc(50% - 20px);
+            @media(max-width:767px){
+                width: 100%;
+            }
+            .heading{
+                color: white;
+                font-family: "md";
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            .description{
+                font-family: "book";
+                font-size: 16px;
+                color: $gray5;
+                margin-bottom: 10px;
+            }
+            .form-wrapper{
+                input{
+                    margin-bottom: 55px;
+                }
+                input, textarea{
+                    background-color: transparent;
+                    border: 0;
+                    border-bottom: 2px solid $white;
+                    &::placeholder{
+                        color: $gray5;
+                        font-size: 16px;
+                        font-family: "book";
+                    }
+                }
+                textarea{
+                    height: 125px !important;
+                }
+                #gform_submit_button_1{
+                    color: $white;
+                    background-color: $orange;
+                    border-radius: 5px;
+                    font-size: 20px;
+                    padding: 12px 83px;
+                    font-family: "md";
+                    border: 0;
+                    transition: 300ms ease; 
+                    &:hover{
+                        transition: 300ms ease; 
+                        background-color: transparent;
+                        box-shadow: inset 0 0 0 2px $orange;
+                    }
+                }
+            }
+        }
+    }
+}

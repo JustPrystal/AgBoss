@@ -1,0 +1,45 @@
+
+* {
+    outline:none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+  }
+  sub { 
+    top: 0.4em; 
+  }
+*,::after,::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body { 
+    margin:0;
+    padding:0;
+  
+    
+  
+}
+body {
+    position:relative;
+    overflow-x: hidden;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+.all-blocks{
+  transition: 300ms ease;
+}
+.blur{
+  transition: 300ms ease;
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+
+

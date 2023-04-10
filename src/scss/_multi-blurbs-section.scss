@@ -1,0 +1,179 @@
+.multi-blurbs-section{
+    background-color: $lightgray;
+    padding: 0 30px;
+    @media(max-width:567px){
+        padding: 0 20px;
+    }
+    .inner{
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 100px 0;
+        position: relative;
+        z-index: 2;
+        .blurb{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            align-items: center;
+            @media(max-width:991px){
+                align-items: flex-start;
+            }
+            @media(max-width:767px){
+                margin-bottom: 80px;
+                &:last-child{ 
+                    margin-bottom: 0;
+                }
+            }
+            &.inverted{
+                flex-direction: row-reverse;
+                .right{
+                    padding-right: 125px;
+                    padding-left: 15px;
+                    @media(max-width:991px){
+                        padding-right: 25px;
+                    }
+                    @media(max-width:767px){
+                        padding-right: 0;
+                        padding-left: 0;
+                    }
+                }
+            }
+            .left{
+                width: 50%;
+                overflow: hidden;
+                @media(max-width:991px){
+                    width: 60%;
+                }
+                @media(max-width:767px){
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 600ms ease; 
+                    scale: 1;
+                    &:hover{
+                        transition: 600ms ease; 
+                        scale: 1.1;
+                    }
+                    @media(max-width:991px){
+                        height: 100%;
+                        max-height: 310px;
+                        width: auto;
+                    }
+                    @media(max-width:767px){
+                        height: auto;
+                        width: 100%;
+                    }
+                }   
+            }
+            .right{
+                width: 50%;   
+                padding-left: 125px;
+                padding-right: 15px;
+                @media(max-width:991px){
+                    padding-left: 25px;
+                    width: 40%;
+                }
+                @media(max-width:767px){
+                    width: 100%;
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+                .subtitle{
+                    font-size: 12px;
+                    font-family: "book";
+                    margin-bottom: 10px;
+                    text-transform: capitalize;
+                }
+                .title{
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    font-family: "md";
+                    margin-bottom: 10px;
+                }
+                .description{
+                    font-size: 15px;
+                    line-height: 133%;
+                    margin-bottom: 30px;
+                    font-family: "book";
+                    color: $gray5;
+                }
+                .button{
+                    color: $white;
+                    background-color: $orange;
+                    padding: 10px 38px;
+                    font-size: 12px;
+                    border-radius: 5px;
+                    font-family: "book";
+                    transition: 300ms ease; 
+                    &:hover{
+                        transition: 300ms ease; 
+                        background-color: transparent;
+                        box-shadow: inset 0 0 0 2px $orange;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    &.with_img{
+        background-color: black;
+        position: relative;
+        .inner{
+            .blurb{
+                color: $white;
+                .right{
+                    .list{
+                        .list-item{
+                            font-size: 16px;
+                            font-family: "book";
+                            line-height: 23px;
+                            position: relative;
+                            padding-left: 15px;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .set1{
+            .bg-img{
+                position: absolute;
+                mix-blend-mode: hard-light;
+                &:nth-child(1){
+                    top: -350px;
+                    left: 0;
+                }
+                &:nth-child(2){
+                    top: 350px;
+                    right: 0;
+                }
+            }
+        }
+        .set2{
+            .bg-img{
+                position: absolute;
+                mix-blend-mode: hard-light;
+                &:nth-child(1){
+                    top: 350px;
+                    left: 0;
+                }
+                &:nth-child(2){
+                    top: -350px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
